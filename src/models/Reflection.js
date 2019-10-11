@@ -23,7 +23,7 @@ class Reflection {
     return this.reflections.find(reflect => reflect.id === id);
   }
 
-  returnAll() {
+  getAll() {
     return this.reflections;
   }
 
