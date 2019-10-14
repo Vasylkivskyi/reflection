@@ -1,10 +1,18 @@
 import express from 'express';
-import Reflection from './src/controllers/Reflection';
+import dotenv from 'dotenv';
+import 'babel-polyfill';
+import ReflectionWithJsObject from './src/usingJSObject/controllers/Reflection';
+import ReflectionWithDB from './src/usingDB/controllers/Reflection';
+
+dotenv.config();
+const Reflection = ReflectionWithDB;
+console.log("----", Reflection.create);
 const app = express();
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  return res.status(200).send({ 'message': 'Is working' });
+  return res.status(200).send({ 'message': 'YAY! Congratulations! Your first endpoint is working' });
 });
 
 app.post('/api/v1/reflections', Reflection.create);
