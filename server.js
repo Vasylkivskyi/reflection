@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import 'babel-polyfill';
-import Reflection from './src/usingDB/controllers/Reflection';
+import Reflection from './src/controllers/Reflection';
 
 dotenv.config();
 console.log("----", Reflection.create);
