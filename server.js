@@ -1,11 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import 'babel-polyfill';
-import ReflectionWithJsObject from './src/usingJSObject/controllers/Reflection';
-import ReflectionWithDB from './src/usingDB/controllers/Reflection';
+import Reflection from './src/usingDB/controllers/Reflection';
 
 dotenv.config();
-const Reflection = ReflectionWithDB;
 console.log("----", Reflection.create);
 const app = express();
 
