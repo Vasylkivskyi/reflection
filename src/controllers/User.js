@@ -37,7 +37,7 @@ const User = {
       return res.status(400).send(err);
     }
   },
-  // new test
+
   async login(req, res) {
     if (!req.body.email || !req.body.password) {
       return res.status(400).send({ 'message': 'Some values are missing' });
